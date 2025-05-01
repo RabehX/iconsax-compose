@@ -90,7 +90,6 @@ You access an icon using the pattern: `Iconsax.<Style>.<IconName>`
 
 *   **`Iconsax.AutoMirrored`**: Contains icons that automatically mirror in Right-to-Left (RTL) layouts. This is useful for icons like arrows that should change direction based on text direction.
     ```kotlin
-    // Example assumes an AutoMirrored style exists with an ArrowLeft icon
     Icon(imageVector = Iconsax.AutoMirrored.Filled.ArrowLeft, ...)
     ```
     
