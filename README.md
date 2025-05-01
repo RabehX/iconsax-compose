@@ -46,7 +46,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import io.github.rabehx.iconsax.Iconsax // Import the Iconsax object containing ImageVectors
+import io.github.rabehx.Iconsax // Import the Iconsax object containing ImageVectors
 
 @Composable
 fun IconExample() {
