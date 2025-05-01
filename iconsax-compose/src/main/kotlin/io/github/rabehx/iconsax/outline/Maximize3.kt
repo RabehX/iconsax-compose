@@ -1,0 +1,108 @@
+/*
+ *
+ *  * Copyright (c) 2025, Рабeх Аззам
+ *  *
+ *  * This file is part of Iconsax Compose.
+ *  *
+ *  * Iconsax Compose is free software: you can redistribute it and/or modify
+ *  * it under the terms of the GNU General Public License as published by
+ *  * the Free Software Foundation, either version 3 of the License, or
+ *  * (at your option) any later version.
+ *  *
+ *  * Iconsax Compose is distributed in the hope that it will be useful,
+ *  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  * GNU General Public License for more details.
+ *  *
+ *  * You should have received a copy of the GNU General Public License
+ *  * along with Iconsax Compose. If not, see <https://www.gnu.org/licenses/>.
+ *
+ */
+
+package io.github.rabehx.iconsax.outline
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import io.github.rabehx.iconsax.Iconsax
+
+val Iconsax.Outline.Maximize3: ImageVector
+    get() {
+        if (_Maximize3 != null) {
+            return _Maximize3!!
+        }
+        _Maximize3 = ImageVector.Builder(
+            name = "Outline.Maximize3",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(fill = SolidColor(Color(0xFF000000))) {
+                moveTo(15f, 22.75f)
+                horizontalLineTo(9f)
+                curveTo(3.57f, 22.75f, 1.25f, 20.43f, 1.25f, 15f)
+                verticalLineTo(9f)
+                curveTo(1.25f, 3.57f, 3.57f, 1.25f, 9f, 1.25f)
+                horizontalLineTo(15f)
+                curveTo(20.43f, 1.25f, 22.75f, 3.57f, 22.75f, 9f)
+                verticalLineTo(15f)
+                curveTo(22.75f, 20.43f, 20.43f, 22.75f, 15f, 22.75f)
+                close()
+                moveTo(9f, 2.75f)
+                curveTo(4.39f, 2.75f, 2.75f, 4.39f, 2.75f, 9f)
+                verticalLineTo(15f)
+                curveTo(2.75f, 19.61f, 4.39f, 21.25f, 9f, 21.25f)
+                horizontalLineTo(15f)
+                curveTo(19.61f, 21.25f, 21.25f, 19.61f, 21.25f, 15f)
+                verticalLineTo(9f)
+                curveTo(21.25f, 4.39f, 19.61f, 2.75f, 15f, 2.75f)
+                horizontalLineTo(9f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF000000))) {
+                moveTo(5.999f, 18.75f)
+                curveTo(5.809f, 18.75f, 5.619f, 18.68f, 5.469f, 18.53f)
+                curveTo(5.179f, 18.24f, 5.179f, 17.76f, 5.469f, 17.47f)
+                lineTo(17.469f, 5.47f)
+                curveTo(17.76f, 5.18f, 18.24f, 5.18f, 18.529f, 5.47f)
+                curveTo(18.819f, 5.76f, 18.819f, 6.24f, 18.529f, 6.53f)
+                lineTo(6.529f, 18.53f)
+                curveTo(6.379f, 18.68f, 6.189f, 18.75f, 5.999f, 18.75f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF000000))) {
+                moveTo(18f, 10.75f)
+                curveTo(17.59f, 10.75f, 17.25f, 10.41f, 17.25f, 10f)
+                verticalLineTo(6.75f)
+                horizontalLineTo(14f)
+                curveTo(13.59f, 6.75f, 13.25f, 6.41f, 13.25f, 6f)
+                curveTo(13.25f, 5.59f, 13.59f, 5.25f, 14f, 5.25f)
+                horizontalLineTo(18f)
+                curveTo(18.41f, 5.25f, 18.75f, 5.59f, 18.75f, 6f)
+                verticalLineTo(10f)
+                curveTo(18.75f, 10.41f, 18.41f, 10.75f, 18f, 10.75f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF000000))) {
+                moveTo(10f, 18.75f)
+                horizontalLineTo(6f)
+                curveTo(5.59f, 18.75f, 5.25f, 18.41f, 5.25f, 18f)
+                verticalLineTo(14f)
+                curveTo(5.25f, 13.59f, 5.59f, 13.25f, 6f, 13.25f)
+                curveTo(6.41f, 13.25f, 6.75f, 13.59f, 6.75f, 14f)
+                verticalLineTo(17.25f)
+                horizontalLineTo(10f)
+                curveTo(10.41f, 17.25f, 10.75f, 17.59f, 10.75f, 18f)
+                curveTo(10.75f, 18.41f, 10.41f, 18.75f, 10f, 18.75f)
+                close()
+            }
+        }.build()
+
+        return _Maximize3!!
+    }
+
+@Suppress("ObjectPropertyName")
+private var _Maximize3: ImageVector? = null
