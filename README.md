@@ -40,34 +40,17 @@ Import the standard `Icon` composable and the `Iconsax` object. Then, pass the d
 
 ```kotlin
 import androidx.compose.material3.Icon // Or from androidx.compose.material.Icon
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import io.github.rabehx.Iconsax // Import the Iconsax object containing ImageVectors
+import io.github.rabehx.iconsax.Iconsax // Import the Iconsax object
 
 @Composable
 fun IconExample() {
-    Row {
-        // Use the Outline style Image icon
-        Icon(
-            imageVector = Iconsax.Outline.Image, // Pass the ImageVector
-            contentDescription = "Image Icon"
-        )
-
-        Spacer(Modifier.width(8.dp))
-
-        // Use the Filled style Notification icon
-        Icon(
-            imageVector = Iconsax.Filled.Notification, // Pass the ImageVector
-            contentDescription = "Notification Icon"
-        )
-    }
+    Icon(
+        imageVector = Iconsax.Filled.Notification, // Pass the ImageVector
+        contentDescription = "Notification Icon"
+    )
 }
 ```
-
 ## Icon Styles
 
 The `Iconsax` object provides access to all icons, organized by style. Each style is a nested object containing the `ImageVector` properties for the icons within that style.
