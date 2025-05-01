@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://central.sonatype.com/artifact/io.github.rabehx/iconsax-compose"><img src="https://img.shields.io/maven-central/v/io.github.rabehx/iconsax-compose?label=MavenCentral&logo=sonatype" alt="Maven Central Version"></a>
-  <a href="https://github.com/RabehX/iconsax-compose/blob/master/LICENSE"><img src="https://img.shields.io/github/license/rabehx/iconsax-compose?label=License&logo=gnu" alt="GitHub license"></a>
+  <a href="https://github.com/RabehX/iconsax-compose/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Rabehx/iconsax-compose?label=License&logo=gnu" alt="GitHub license"></a>
   <a href="https://t.me/RabehX"><img src="https://img.shields.io/badge/Telegram-Channel-blue.svg?logo=telegram" alt="Channel"></a>
   <a href="https://github.com/RabahX"><img src="https://img.shields.io/github/stars/RabahX/iconsax-compose?label=Stars&logo=github" alt="Stars"></a>
 </p>
