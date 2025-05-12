@@ -26,7 +26,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
-import io.github.rabehx.Iconsax
+import io.github.rabehx.iconsax.Iconsax
 
 val Iconsax.Filled.Bug: ImageVector
     get() {

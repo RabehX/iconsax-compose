@@ -35,6 +35,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Iconsax"
+rootProject.name = "Iconsax Compose"
 include(":iconsax-compose")
 

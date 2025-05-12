@@ -30,7 +30,7 @@ plugins {
 
 android {
     namespace = "io.github.rabehx"
-    compileSdk = 35
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_20
@@ -57,7 +57,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
     signAllPublications()
 
-    coordinates("io.github.rabehx", "iconsax-compose", "0.0.2")
+    coordinates("io.github.rabehx", "iconsax-compose", "0.0.3")
 
     pom {
         name.set("Iconsax Compose")
