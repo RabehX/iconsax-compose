@@ -19,30 +19,61 @@
  *
  */
 
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.maven.publish)
+}
+
+kotlin {
+    androidTarget {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
+        }
+    }
+
+    listOf(
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach { iosTarget ->
+        iosTarget.binaries.framework {
+            baseName = "IconsaxCompose"
+            isStatic = true
+        }
+    }
+
+    jvm()
+
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+        binaries.executable()
+    }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation(compose.ui)
+        }
+    }
 }
 
 android {
     namespace = "io.github.rabehx"
-    compileSdk = 36
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_20
-        targetCompatibility = JavaVersion.VERSION_20
-    }
-
-    kotlinOptions {
-        jvmTarget = "20"
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     defaultConfig {
-        minSdk = 24
+        minSdk = libs.versions.android.minSdk.get().toInt()
     }
 
     publishing {
@@ -61,7 +92,7 @@ mavenPublishing {
 
     pom {
         name.set("Iconsax Compose")
-        description.set("A Jetpack Compose library that provides easy access to the Iconsax icon set (over 1,000 scalable vector icons created by Vuesax in multiple styles — Linear, Bulk, Outline, TwoTone, and Filled. Designed for easy integration, it enables consistent and modern UI development with minimal implementation effort.")
+        description.set("A Compose Multiplatform library that provides easy access to the Iconsax icon set (over 1,000 scalable vector icons created by Vuesax in multiple styles — Linear, Bulk, Outline, TwoTone, and Filled. Designed for easy integration, it enables consistent and modern UI development with minimal implementation effort.")
         url.set("https://github.com/rabehx/iconsax")
         inceptionYear.set("2025")
         licenses {
@@ -90,7 +121,6 @@ mavenPublishing {
     }
 }
 
-
 dependencies {
-    implementation("org.jetbrains.compose.ui:ui:1.7.3")
+    debugImplementation(compose.uiTooling)
 }
